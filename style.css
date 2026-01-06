@@ -1,0 +1,331 @@
+/* ==================== 전역 스타일 설정 ==================== */
+
+/* 모든 요소에 대한 기본 스타일 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body 기본 스타일 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==================== 메인 컨테이너 ==================== */
+
+/* 앱의 전체 컨테이너 */
+.container {
+    width: 100%;
+    max-width: 420px;
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+}
+
+/* ==================== 총 자산 헤더 ==================== */
+
+/* 상단 총 자산 표시 영역 */
+.total-asset-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 30px;
+    text-align: center;
+    color: white;
+}
+
+/* "총 자산:" 라벨 */
+.total-label {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+/* 총 자산 금액 */
+.total-amount {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* ==================== 거래 내역 카드 ==================== */
+
+/* 거래 내역을 담는 카드 컨테이너 */
+.transaction-card {
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    flex: 1;
+}
+
+/* 카드 헤더 (제목과 버튼) */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 카드 제목 */
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* "최근 보기" 버튼 */
+.view-all-btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #f0f0f0;
+    color: #667eea;
+}
+
+/* ==================== 거래 내역 리스트 ==================== */
+
+/* 거래 내역 목록 */
+.transaction-list {
+    list-style: none;
+}
+
+/* 각 거래 항목 */
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-item:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+/* 거래 정보 (날짜 + 설명) */
+.transaction-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* 거래 날짜 */
+.transaction-date {
+    font-size: 14px;
+    color: #999;
+    font-weight: 500;
+    min-width: 45px;
+}
+
+/* 거래 설명 */
+.transaction-desc {
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 거래 금액 */
+.transaction-amount {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* 양수 금액 (입금) */
+.transaction-amount.positive {
+    color: #333;
+}
+
+/* 음수 금액 (출금) */
+.transaction-amount.negative {
+    color: #f43f5e;
+}
+
+/* ==================== 하단 네비게이션 ==================== */
+
+/* 하단 네비게이션 바 */
+.bottom-nav {
+    background-color: white;
+    padding: 15px 10px 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    gap: 5px;
+}
+
+/* 각 네비게이션 아이템 */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 70px;
+}
+
+.nav-item:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+}
+
+.nav-item:active {
+    transform: translateY(0);
+}
+
+/* 네비게이션 아이콘 원형 배경 */
+.nav-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover .nav-icon {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 아이콘 이모지 */
+.icon-emoji {
+    font-size: 26px;
+}
+
+/* 네비게이션 라벨 */
+.nav-label {
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ==================== 반응형 디자인 (모바일) ==================== */
+
+/* 작은 화면 (360px 이하) */
+@media (max-width: 360px) {
+    .total-amount {
+        font-size: 36px;
+    }
+    
+    .nav-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .icon-emoji {
+        font-size: 22px;
+    }
+    
+    .nav-label {
+        font-size: 11px;
+    }
+    
+    .transaction-card {
+        margin: 15px;
+        padding: 15px;
+    }
+}
+
+/* 중간 화면 (768px 이상) - 태블릿 */
+@media (min-width: 768px) {
+    body {
+        padding: 40px;
+    }
+    
+    .container {
+        max-width: 480px;
+    }
+}
+
+/* 큰 화면 (1024px 이상) - 데스크톱 */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 500px;
+    }
+    
+    .transaction-item:hover {
+        background-color: #f5f5f5;
+        padding-left: 10px;
+    }
+}
+
+/* ==================== 애니메이션 ==================== */
+
+/* 페이지 로드 시 카드 애니메이션 */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.transaction-card {
+    animation: slideUp 0.5s ease-out;
+}
+
+/* 네비게이션 아이템 순차 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.nav-item {
+    animation: fadeIn 0.4s ease-out backwards;
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.1s; }
+.nav-item:nth-child(2) { animation-delay: 0.15s; }
+.nav-item:nth-child(3) { animation-delay: 0.2s; }
+.nav-item:nth-child(4) { animation-delay: 0.25s; }
+.nav-item:nth-child(5) { animation-delay: 0.3s; }
+.nav-item:nth-child(6) { animation-delay: 0.35s; }
+.nav-item:nth-child(7) { animation-delay: 0.4s; }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자산 관리 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+
+        <!-- 총 자산 헤더 섹션 -->
+        <header class="total-asset-header">
+            <div class="total-label">총 자산:</div>
+            <!-- 총 자산 금액은 JavaScript를 통해 동적으로 설정됩니다 -->
+            <div class="total-amount" id="totalAmount">0원</div>
+        </header>
+
+        <!-- 최근 거래 내역 카드 -->
+        <div class="transaction-card">
+            <!-- 카드 헤더 -->
+            <div class="card-header">
+                <h2 class="card-title">최근 거래 내역</h2>
+                <button class="view-all-btn" id="viewAllBtn">최근 보기</button>
+            </div>
+
+            <!-- 거래 내역 리스트 (JavaScript로 동적 생성됨) -->
+            <ul class="transaction-list" id="transactionList">
+                <!-- 거래 항목들이 JavaScript를 통해 여기에 추가됩니다 -->
+            </ul>
+        </div>
+
+        <!-- 하단 네비게이션 바 -->
+        <nav class="bottom-nav">
+            <!-- 네비게이션 아이템들 -->
+            <button class="nav-item" data-category="내돈관리">
+                <div class="nav-icon" style="background-color: #7DD3FC;">
+                    <span class="icon-emoji">💰</span>
+                </div>
+                <span class="nav-label">내 자산관리</span>
+            </button>
+
+            <button class="nav-item" data-category="쇼핑">
+                <div class="nav-icon" style="background-color: #FB7185;">
+                    <span class="icon-emoji">🛒</span>
+                </div>
+                <span class="nav-label">쇼핑</span>
+            </button>
+
+            <button class="nav-item" data-category="은행">
+                <div class="nav-icon" style="background-color: #86EFAC;">
+                    <span class="icon-emoji">🏦</span>
+                </div>
+                <span class="nav-label">은행</span>
+            </button>
+
+            <button class="nav-item" data-category="증권">
+                <div class="nav-icon" style="background-color: #60A5FA;">
+                    <span class="icon-emoji">📈</span>
+                </div>
+                <span class="nav-label">증권</span>
+            </button>
+
+            <button class="nav-item" data-category="건매">
+                <div class="nav-icon" style="background-color: #FB923C;">
+                    <span class="icon-emoji">🔨</span>
+                </div>
+                <span class="nav-label">경매</span>
+            </button>
+
+            <button class="nav-item" data-category="상금">
+                <div class="nav-icon" style="background-color: #F472B6;">
+                    <span class="icon-emoji">🏆</span>
+                </div>
+                <span class="nav-label">상금</span>
+            </button>
+
+            <button class="nav-item" data-category="기타">
+                <div class="nav-icon" style="background-color: #A78BFA;">
+                    <span class="icon-emoji">⋯</span>
+                </div>
+                <span class="nav-label">기타</span>
+            </button>
+        </nav>
+
+    </div>
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+
+</html>
